@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "post"
+    "displayName": "post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -32,6 +33,24 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "posts"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
