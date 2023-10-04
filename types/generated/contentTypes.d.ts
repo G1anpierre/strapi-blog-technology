@@ -765,8 +765,12 @@ export interface ApiPostPost extends Schema.CollectionType {
       'api::category.category'
     >;
     featured: Attribute.Boolean & Attribute.DefaultTo<false>;
-    subtitle: Attribute.Text;
-    image: Attribute.Media;
+    subtitle: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        minLength: 52;
+        maxLength: 80;
+      }>;
+    image: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

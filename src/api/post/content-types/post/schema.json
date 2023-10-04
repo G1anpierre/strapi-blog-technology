@@ -39,12 +39,14 @@
       "default": false
     },
     "subtitle": {
-      "type": "text"
+      "type": "text",
+      "minLength": 52,
+      "maxLength": 80
     },
     "image": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
