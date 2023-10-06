@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_footers",
+  "info": {
+    "displayName": "footer",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "newsletter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.newsletter"
+    },
+    "sections": {
+      "displayName": "sections",
+      "type": "component",
+      "repeatable": true,
+      "component": "home.section"
+    }
+  }
+}

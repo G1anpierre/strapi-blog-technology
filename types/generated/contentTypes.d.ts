@@ -718,6 +718,7 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     singularName: 'homepage';
     pluralName: 'homepages';
     displayName: 'homepage';
+    description: '';
   };
   options: {
     draftAndPublish: true;

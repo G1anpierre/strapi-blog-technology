@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_newsletters",
+  "info": {
+    "displayName": "newsletter",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

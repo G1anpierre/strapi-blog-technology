@@ -7,10 +7,27 @@
   },
   "options": {},
   "attributes": {
-    "post": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::post.post"
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
