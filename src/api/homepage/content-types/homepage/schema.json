@@ -17,6 +17,16 @@
       "type": "component",
       "repeatable": false,
       "component": "home.hero"
+    },
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.header"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.footer"
     }
   }
 }

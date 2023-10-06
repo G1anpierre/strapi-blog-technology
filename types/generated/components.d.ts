@@ -12,6 +12,17 @@ export interface HomeFooter extends Schema.Component {
   };
 }
 
+export interface HomeHeader extends Schema.Component {
+  collectionName: 'components_home_headers';
+  info: {
+    displayName: 'header';
+    icon: 'stack';
+  };
+  attributes: {
+    tabs: Attribute.Component<'shared.link', true>;
+  };
+}
+
 export interface HomeHero extends Schema.Component {
   collectionName: 'components_home_heroes';
   info: {
@@ -22,9 +33,8 @@ export interface HomeHero extends Schema.Component {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    button: Attribute.String;
-    slug: Attribute.String;
     image: Attribute.Media;
+    button: Attribute.Component<'shared.link'>;
   };
 }
 
@@ -69,6 +79,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'home.footer': HomeFooter;
+      'home.header': HomeHeader;
       'home.hero': HomeHero;
       'home.newsletter': HomeNewsletter;
       'home.section': HomeSection;

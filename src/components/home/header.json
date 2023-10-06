@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_headers",
+  "info": {
+    "displayName": "header",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}
