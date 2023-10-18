@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_about_values",
+  "info": {
+    "displayName": "values",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "valuesList": {
+      "displayName": "valuesList",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.values-list",
+      "required": true
+    }
+  }
+}

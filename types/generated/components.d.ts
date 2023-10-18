@@ -1,5 +1,51 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface AboutHero extends Schema.Component {
+  collectionName: 'components_about_heroes';
+  info: {
+    displayName: 'hero';
+    icon: 'collapse';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.Text & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
+  };
+}
+
+export interface AboutValuesList extends Schema.Component {
+  collectionName: 'components_about_values_lists';
+  info: {
+    displayName: 'valuesList';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text;
+    icon: Attribute.Enumeration<
+      ['rocket', 'people', 'stars', 'hand', 'cap', 'sun']
+    > &
+      Attribute.Required;
+  };
+}
+
+export interface AboutValues extends Schema.Component {
+  collectionName: 'components_about_values';
+  info: {
+    displayName: 'values';
+    icon: 'bold';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    valuesList: Attribute.Component<'about.values-list', true> &
+      Attribute.Required;
+  };
+}
+
 export interface HomeFooter extends Schema.Component {
   collectionName: 'components_home_footers';
   info: {
@@ -78,6 +124,9 @@ export interface SharedLink extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'about.hero': AboutHero;
+      'about.values-list': AboutValuesList;
+      'about.values': AboutValues;
       'home.footer': HomeFooter;
       'home.header': HomeHeader;
       'home.hero': HomeHero;
